@@ -4,10 +4,17 @@
   <meta charset="UTF-8" />
   <title>Javier Carranza | Portafolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<!-- BARRA DE PROGRESO DE SCROLL -->
+<div id="scroll-progress"></div>
+
+<!-- CURSOR PERSONALIZADO -->
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
 
 <!-- NAVBAR -->
 <header class="navbar">
@@ -39,19 +46,47 @@
   <div class="hero-content">
     <p class="hero-eyebrow">✦ Desarrollador · Tijuana, México</p>
     <h1>Javier Antonio<br><em>Carranza Hernández</em></h1>
-    <p class="hero-sub">Ingeniero en Sistemas Computacionales. Construyo soluciones web funcionales, limpias y duraderas.</p>
+    <p class="hero-sub">Ingeniero en Sistemas Computacionales. <span id="typewriter"></span></p>
     <div class="hero-buttons">
       <a href="#proyectos" class="btn">Ver proyectos</a>
       <a href="CV_Javier_Carranza.pdf" class="btn btn-outline" download>Descargar CV</a>
     </div>
   </div>
+  <!-- Indicador de scroll -->
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"><div class="scroll-dot"></div></div>
+  </div>
 </section>
 
 <main>
 
+  <!-- STATS -->
+  <section class="stats-section fade-in">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
+        <p>Años de experiencia</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+        <p>Proyectos completados</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
+        <p>Clientes reales</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+        <p>Compromiso en cada proyecto</p>
+      </div>
+    </div>
+  </section>
+
   <!-- SOBRE MÍ -->
-  <section id="sobre-mi" class="about">
+  <section id="sobre-mi" class="about fade-in">
     <div class="section-label">
+      <span class="section-num">01</span>
       <span class="tag">// Sobre mí</span>
     </div>
     <div class="about-grid">
@@ -63,27 +98,38 @@
         <a href="#proyectos" class="btn-primary">Ver proyectos →</a>
       </div>
       <div class="about-right">
-        <h3>Habilidades y herramientas</h3>
-        <div class="skills-block">
-          <h4>Frontend</h4>
-          <div class="skills">
-            <span class="skill">HTML5</span><span class="skill">CSS3</span>
-            <span class="skill">React</span><span class="skill">Bootstrap</span>
+        <!-- Foto de perfil -->
+        <div class="profile-wrapper">
+          <div class="profile-photo">
+            <img src="Fotos/profile.jpg" alt="Javier Carranza" />
+          </div>
+          <div class="profile-badge">
+            <span>✦</span> Disponible para proyectos
           </div>
         </div>
-        <div class="skills-block">
-          <h4>Backend</h4>
-          <div class="skills">
-            <span class="skill">Node.js</span><span class="skill">MySQL</span>
-            <span class="skill">Java</span><span class="skill">C++</span>
-            <span class="skill">Python</span><span class="skill">JavaScript</span>
+        <div class="skills-section">
+          <h3>Habilidades y herramientas</h3>
+          <div class="skills-block">
+            <h4>Frontend</h4>
+            <div class="skills">
+              <span class="skill">HTML5</span><span class="skill">CSS3</span>
+              <span class="skill">React</span><span class="skill">Bootstrap</span>
+            </div>
           </div>
-        </div>
-        <div class="skills-block">
-          <h4>Herramientas</h4>
-          <div class="skills">
-            <span class="skill">Git</span><span class="skill">GitHub</span>
-            <span class="skill">Visual Studio</span><span class="skill">Microsoft Office</span>
+          <div class="skills-block">
+            <h4>Backend</h4>
+            <div class="skills">
+              <span class="skill">Node.js</span><span class="skill">MySQL</span>
+              <span class="skill">Java</span><span class="skill">C++</span>
+              <span class="skill">Python</span><span class="skill">JavaScript</span>
+            </div>
+          </div>
+          <div class="skills-block">
+            <h4>Herramientas</h4>
+            <div class="skills">
+              <span class="skill">Git</span><span class="skill">GitHub</span>
+              <span class="skill">Visual Studio</span><span class="skill">Microsoft Office</span>
+            </div>
           </div>
         </div>
       </div>
@@ -91,8 +137,9 @@
   </section>
 
   <!-- REDES -->
-  <section id="habilidades" class="social-section">
+  <section id="habilidades" class="social-section fade-in">
     <div class="section-label">
+      <span class="section-num">02</span>
       <span class="tag">// Redes</span>
     </div>
     <div class="social-wrapper">
@@ -114,8 +161,9 @@
   </section>
 
   <!-- PROYECTOS -->
-  <section id="proyectos" class="projects-section">
+  <section id="proyectos" class="projects-section fade-in">
     <div class="section-label">
+      <span class="section-num">03</span>
       <span class="tag">// Proyectos</span>
     </div>
     <div class="projects-grid">
@@ -147,8 +195,9 @@
   </section>
 
   <!-- EXPERIENCIA -->
-  <section id="experiencia" class="experience">
+  <section id="experiencia" class="experience fade-in">
     <div class="section-label">
+      <span class="section-num">04</span>
       <span class="tag">// Experiencia</span>
     </div>
     <div class="experience-grid">
@@ -191,8 +240,9 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="contact-section">
+  <section id="contacto" class="contact-section fade-in">
     <div class="section-label">
+      <span class="section-num">05</span>
       <span class="tag">// Contacto</span>
     </div>
     <div class="contact-title">
@@ -220,11 +270,11 @@
           <div><h4>Ubicación</h4><span>Tijuana, México</span></div>
         </div>
       </div>
-      <form class="contact-form" action="mailto:javierchernandez201@gmail.com" method="POST" enctype="text/plain">
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <label for="nombre">Nombre completo</label>
         <input id="nombre" name="nombre" type="text" placeholder="Tu nombre completo" required />
         <label for="correo">Email</label>
-        <input id="correo" name="correo" type="email" placeholder="Tu correo" required />
+        <input id="correo" name="email" type="email" placeholder="Tu correo" required />
         <label for="mensaje">Mensaje</label>
         <textarea id="mensaje" name="mensaje" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
         <button type="submit">✈ Enviar mensaje</button>
@@ -236,74 +286,165 @@
 </main>
 
 <footer>
-  <p>© 2026 Javier Carranza &nbsp;·&nbsp; Hecho en Tijuana</p>
+  <p>© <span id="footer-year"></span> Javier Carranza &nbsp;·&nbsp; Hecho en Tijuana</p>
 </footer>
 
-<!-- ═══════════════════════════════
-     SCRIPTS — particles.js PRIMERO,
-     luego la configuración
-════════════════════════════════ -->
+<!-- SCRIPTS -->
 <script src="particles.js"></script>
 <script>
-  /* Se ejecuta al cargar la página, DESPUÉS de que particles.js ya está disponible */
-  window.addEventListener('load', function () {
-    if (typeof particlesJS === 'undefined') {
-      console.warn('particles.js no encontrado. Verifica que el archivo exista en la carpeta.');
+/* ═══════════════════════════════
+   1. PARTICLES
+═══════════════════════════════ */
+window.addEventListener('load', function () {
+  if (typeof particlesJS === 'undefined') return;
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 70, density: { enable: true, value_area: 900 } },
+      color: { value: '#38bdf8' },
+      shape: { type: 'circle' },
+      opacity: { value: 0.22, random: true, anim: { enable: true, speed: 0.6, opacity_min: 0.05, sync: false } },
+      size: { value: 2.5, random: true, anim: { enable: false } },
+      line_linked: { enable: true, distance: 150, color: '#38bdf8', opacity: 0.10, width: 1 },
+      move: { enable: true, speed: 0.9, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false }
+    },
+    interactivity: {
+      detect_on: 'canvas',
+      events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
+      modes: { grab: { distance: 180, line_linked: { opacity: 0.3 } }, push: { particles_nb: 3 } }
+    },
+    retina_detect: true
+  });
+});
+
+/* ═══════════════════════════════
+   2. AÑO DINÁMICO EN FOOTER
+═══════════════════════════════ */
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+/* ═══════════════════════════════
+   3. BARRA DE PROGRESO DE SCROLL
+═══════════════════════════════ */
+const progressBar = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (window.scrollY / total) * 100;
+  progressBar.style.width = progress + '%';
+});
+
+/* ═══════════════════════════════
+   4. CURSOR PERSONALIZADO
+═══════════════════════════════ */
+const cursor      = document.getElementById('cursor');
+const cursorTrail = document.getElementById('cursor-trail');
+let mouseX = 0, mouseY = 0;
+let trailX = 0, trailY = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+});
+
+// Trail con lag suave
+function animateTrail() {
+  trailX += (mouseX - trailX) * 0.12;
+  trailY += (mouseY - trailY) * 0.12;
+  cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+  requestAnimationFrame(animateTrail);
+}
+animateTrail();
+
+// Agrandar cursor sobre links y botones
+document.querySelectorAll('a, button, .skill, .project-card, .social-card, .job').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+});
+
+// Ocultar cursor personalizado fuera de la ventana
+document.addEventListener('mouseleave', () => {
+  cursor.style.opacity = '0';
+  cursorTrail.style.opacity = '0';
+});
+document.addEventListener('mouseenter', () => {
+  cursor.style.opacity = '1';
+  cursorTrail.style.opacity = '1';
+});
+
+/* ═══════════════════════════════
+   5. ANIMACIONES DE ENTRADA
+═══════════════════════════════ */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+/* ═══════════════════════════════
+   6. CONTADOR DE STATS ANIMADO
+═══════════════════════════════ */
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.querySelectorAll('.stat-number').forEach(el => {
+      const target = parseInt(el.dataset.target);
+      const duration = 1600;
+      const start = performance.now();
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // easeOutQuart
+        const ease = 1 - Math.pow(1 - progress, 4);
+        el.textContent = Math.floor(ease * target);
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(update);
+    });
+    statObserver.unobserve(entry.target);
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stats-section').forEach(el => statObserver.observe(el));
+
+/* ═══════════════════════════════
+   7. EFECTO TYPEWRITER
+═══════════════════════════════ */
+const phrases = [
+  'Desarrollador Jr.',
+  'Soporte TI.',
+  'Freelancer.',
+  'Amante del código limpio.'
+];
+let phraseIndex = 0;
+let charIndex   = 0;
+let deleting    = false;
+const tw = document.getElementById('typewriter');
+
+function typewrite() {
+  const current = phrases[phraseIndex];
+  if (!deleting) {
+    tw.textContent = current.slice(0, ++charIndex);
+    if (charIndex === current.length) {
+      deleting = true;
+      setTimeout(typewrite, 1800);
       return;
     }
+  } else {
+    tw.textContent = current.slice(0, --charIndex);
+    if (charIndex === 0) {
+      deleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
+  }
+  setTimeout(typewrite, deleting ? 45 : 80);
+}
+typewrite();
 
-    particlesJS('particles-js', {
-      particles: {
-        number: {
-          value: 70,
-          density: { enable: true, value_area: 900 }
-        },
-        color: { value: '#38bdf8' },
-        shape: { type: 'circle' },
-        opacity: {
-          value: 0.22,
-          random: true,
-          anim: { enable: true, speed: 0.6, opacity_min: 0.05, sync: false }
-        },
-        size: {
-          value: 2.5,
-          random: true,
-          anim: { enable: false }
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: '#38bdf8',
-          opacity: 0.10,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 0.9,
-          direction: 'none',
-          random: true,
-          straight: false,
-          out_mode: 'out',
-          bounce: false
-        }
-      },
-      interactivity: {
-        detect_on: 'canvas',
-        events: {
-          onhover: { enable: true, mode: 'grab' },
-          onclick:  { enable: true, mode: 'push' },
-          resize: true
-        },
-        modes: {
-          grab:  { distance: 180, line_linked: { opacity: 0.3 } },
-          push:  { particles_nb: 3 }
-        }
-      },
-      retina_detect: true
-    });
-  });
 </script>
-<script src="main.js"></script>
-
 </body>
 </html>
