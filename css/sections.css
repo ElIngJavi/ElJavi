@@ -825,16 +825,13 @@
   text-align: center;
 }
 
-.spotify-mobile-art {
-  font-size: 3rem;
-  background: rgba(29, 185, 84, 0.1);
-  border: 1px solid rgba(29, 185, 84, 0.25);
-  border-radius: 16px;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.spotify-mobile-img {
+  width: 100%;
+  max-width: 260px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(29, 185, 84, 0.2);
 }
 
 .spotify-mobile-desc {
