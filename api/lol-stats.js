@@ -50,7 +50,8 @@ export default async function handler(req, res) {
       { headers: { 'X-Riot-Token': API_KEY } }
     );
     const rankData  = await rankRes.json();
-    const soloQueue = rankData.find(q => q.queueType === 'RANKED_SOLO_5x5') || null;
+    const rankArray = Array.isArray(rankData) ? rankData : [];
+    const soloQueue = rankArray.find(q => q.queueType === 'RANKED_SOLO_5x5') || null;
 
     function calcWinrate(queue) {
       if (!queue) return null;
