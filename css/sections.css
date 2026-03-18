@@ -155,79 +155,272 @@
   gap: 7px;
 }
 
-/* ── Redes sociales ─────────────────────────────────────── */
-.social-wrapper {
+/* ── Sobre mí & Redes ───────────────────────────────────── */
+.lol-banner {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0a1628;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 32px 36px;
+  margin-bottom: 16px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
   align-items: center;
 }
 
-.social-text h2 {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 800;
-  letter-spacing: -1px;
+.lol-banner::before {
+  content: "";
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(74,222,128,.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.lol-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  border-radius: 999px;
+  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin-bottom: 12px;
 }
 
-.social-text p {
-  color: var(--muted2);
-  font-size: 0.92rem;
-  max-width: 320px;
+.lol-badge::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
 }
 
-.social-grid {
+.lol-left h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  color: #e2f8ff;
+}
+
+.lol-left h2 span { color: #7ee8ff; }
+.lol-left p { font-size: 0.85rem; color: var(--muted); margin-bottom: 20px; }
+
+.lol-stats-row { display: flex; gap: 28px; }
+
+.lol-stat { display: flex; flex-direction: column; }
+
+.lol-stat-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #e2f8ff;
+}
+
+.lol-stat-num.wr { color: #4ade80; }
+
+.lol-stat-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.mains-col { display: flex; flex-direction: column; gap: 8px; }
+
+.main-pill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.main-pill:hover { background: rgba(255, 255, 255, 0.07); }
+
+.main-pill-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+.main-pill-role {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.main-mastery {
+  margin-left: auto;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fbbf24;
+  letter-spacing: 0.5px;
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 14px;
+}
+
+/* Spotify */
+.spotify-card {
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid rgba(29, 185, 84, 0.2);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
-.social-card {
+.spotify-header {
+  padding: 16px 18px 10px;
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 18px 20px;
-  border: 1px solid var(--border);
-  border-radius: var(--r);
-  background: var(--surface);
-  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+  gap: 10px;
+  border-bottom: 1px solid var(--border);
 }
 
-.social-card:hover {
-  border-color: rgba(56, 189, 248, 0.3);
-  background: var(--surface2);
-  transform: translateX(5px);
-}
-
-.icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 11px;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+.spotify-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: #1DB954;
   flex-shrink: 0;
 }
 
-.icon img {
-  width: 32px;
-  height: 32px;
-  object-fit: cover;
-  border-radius: 6px;
+.spotify-title { font-size: 0.82rem; font-weight: 700; }
+.spotify-sub   { font-size: 0.7rem; color: var(--muted); }
+
+.spotify-embed {
+  flex: 1;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.info h3 {
-  font-size: 0.95rem;
+.spotify-coming { font-size: 0.78rem; color: var(--muted); text-align: center; }
+
+.spotify-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
   font-weight: 700;
-  margin-bottom: 2px;
+  color: #1DB954;
+  background: rgba(29, 185, 84, 0.1);
+  border: 1px solid rgba(29, 185, 84, 0.3);
+  border-radius: 999px;
+  padding: 7px 16px;
+  transition: background 0.2s;
+  margin-top: 4px;
 }
 
-.info p {
-  font-size: 0.82rem;
+.spotify-btn:hover { background: rgba(29, 185, 84, 0.18); }
+
+/* Videojuegos */
+.games-card {
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 18px;
+}
+
+.card-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.game-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.game-item:last-child { border-bottom: none; }
+
+.game-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.game-name { font-size: 0.84rem; font-weight: 700; }
+.game-sub  { font-size: 0.7rem; color: var(--muted); }
+
+/* Películas + Redes */
+.misc-card {
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.movie-list { display: flex; flex-direction: column; gap: 7px; }
+
+.movie-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted2);
+}
+
+.movie-bar {
+  width: 3px; height: 14px;
+  border-radius: 2px;
+  background: #f87171;
+  flex-shrink: 0;
+}
+
+.social-row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.social-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted2);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.social-pill:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  color: var(--text);
+}
+
+.social-pill-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bottom-grid { grid-template-columns: 1fr; }
+  .lol-banner  { grid-template-columns: 1fr; }
+  .mains-col   { flex-direction: row; flex-wrap: wrap; }
 }
 
 /* ── Proyectos ──────────────────────────────────────────── */
