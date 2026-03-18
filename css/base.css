@@ -119,3 +119,25 @@ footer {
   font-weight: 500;
   color: var(--muted);
 }
+
+body.light-mode {
+  --bg:       #0f172a;
+  --surface:  #1e293b;
+  --surface2: #263348;
+  --border:   rgba(255, 255, 255, 0.12);
+  --text:     #f0f4f8;
+  --muted:    #94a3b8;
+  --muted2:   #cbd5e1;
+}
+
+body.light-mode .navbar {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+body.light-mode .hero {
+  background: var(--bg);
+}
+
+body.light-mode .lol-banner {
+  background: #162032;
+}

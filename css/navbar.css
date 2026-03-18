@@ -67,3 +67,23 @@
 .overlay {
   display: none;
 }
+
+.theme-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.theme-btn span {
+  display: inline-block;
+}
+
+.theme-btn:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(56, 189, 248, 0.05);
+}
