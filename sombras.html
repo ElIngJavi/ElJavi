@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sombras Literarias | Javier Carranza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo"><a href="../index.html">Javier Carranza</a></div>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span><span></span><span></span>
+      </label>
+      <label for="menu-toggle" class="overlay"></label>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#inicio">Inicio</a></li>
+          <li><a href="../index.html#proyectos">Proyectos</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pd-main-wrap">
+
+    <a href="../index.html#proyectos" class="pd-back">← Volver a proyectos</a>
+
+    <div class="pd-hero">
+      <img src="../assets/img/sombras.png" alt="Sombras Literarias" />
+      <div class="pd-hero-overlay"></div>
+      <div class="pd-hero-content">
+        <h1>Sombras Literarias — Biblioteca de lo Oscuro</h1>
+        <p>HTML · CSS · JavaScript · Responsive</p>
+      </div>
+    </div>
+
+    <div class="pd-grid">
+      <div class="pd-content">
+        <h2>Sobre el proyecto</h2>
+        <p>Biblioteca digital de género oscuro con más de 36 libros de terror, manga, cómic y misterio. Incluye sistema de categorías, favoritos, búsqueda en tiempo real y ordenamiento por diferentes criterios.</p>
+
+        <div class="pd-tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          <span>Responsive</span><span>LocalStorage</span>
+        </div>
+
+        <h2>Características principales</h2>
+        <ul class="pd-features">
+          <li>Catálogo de más de 36 libros organizados por categorías.</li>
+          <li>Sistema de favoritos persistente con LocalStorage.</li>
+          <li>Búsqueda en tiempo real por título o autor.</li>
+          <li>Ordenamiento por título, autor y calificación.</li>
+          <li>Diseño editorial oscuro con tipografía gótica.</li>
+        </ul>
+      </div>
+
+      <div class="pd-sidebar">
+        <div class="pd-card">
+          <div class="pd-card-title">Links</div>
+          <a href="https://elingjavi.github.io/Sombras-literarias" target="_blank" class="pd-link">
+            <span class="pd-link-dot" style="background:#38bdf8"></span>Ver Sitio en vivo
+          </a>
+          <a href="https://github.com/ElIngJavi/Sombras-literarias" target="_blank" class="pd-link">
+            <span class="pd-link-dot" style="background:#94a3b8"></span>Ver Código en GitHub
+          </a>
+        </div>
+        <div class="pd-card">
+          <div class="pd-card-title">Detalles</div>
+          <div class="pd-stat"><span class="pd-stat-label">Año</span><span class="pd-stat-val">2025</span></div>
+          <div class="pd-stat"><span class="pd-stat-label">Tipo</span><span class="pd-stat-val">Proyecto personal</span></div>
+          <div class="pd-stat"><span class="pd-stat-label">Libros</span><span class="pd-stat-val">36+</span></div>
+          <div class="pd-stat"><span class="pd-stat-label">Estado</span><span class="pd-stat-val" style="color:#4ade80">En línea</span></div>
+        </div>
+        <div class="pd-card">
+          <div class="pd-card-title">Acciones</div>
+          <a href="https://elingjavi.github.io/Sombras-literarias" target="_blank" class="pd-btn solid">Ver Sitio →</a>
+          <a href="https://github.com/ElIngJavi/Sombras-literarias" target="_blank" class="pd-btn outline">Ver código</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="footer-year"></span> Javier Carranza &nbsp;·&nbsp; Hecho en Tijuana</p>
+  </footer>
+
+  <script src="../js/particles.js"></script>
+  <script src="../js/cursor.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

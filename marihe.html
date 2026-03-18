@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>MariHe App | Javier Carranza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo"><a href="../index.html">Javier Carranza</a></div>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span><span></span><span></span>
+      </label>
+      <label for="menu-toggle" class="overlay"></label>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#inicio">Inicio</a></li>
+          <li><a href="../index.html#proyectos">Proyectos</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pd-main-wrap">
+
+    <a href="../index.html#proyectos" class="pd-back">← Volver a proyectos</a>
+
+    <!-- Hero -->
+    <div class="pd-hero">
+      <img src="../assets/img/MariHev2.jpg" alt="MariHe App" />
+      <div class="pd-hero-overlay"></div>
+      <div class="pd-hero-content">
+        <div class="pd-badge">⭐ Destacado</div>
+        <h1>MariHe App — Sistema de Conteo de Productos</h1>
+        <p>React 18 · FastAPI · MongoDB · Python · Vercel</p>
+      </div>
+    </div>
+
+    <div class="pd-grid">
+
+      <!-- Contenido principal -->
+      <div class="pd-content">
+        <h2>Sobre el proyecto</h2>
+        <p>Aplicación web fullstack para el conteo y registro de productos en tiempo real. Desarrollada para una empresa local en Tijuana, incluye autenticación JWT, roles de usuario, exportación a Excel y panel de administrador completo.</p>
+
+        <div class="pd-tags">
+          <span>React 18</span><span>FastAPI</span><span>MongoDB</span>
+          <span>Python</span><span>Vercel</span><span>JWT</span>
+        </div>
+
+        <h2>Características principales</h2>
+        <ul class="pd-features">
+          <li>Autenticación con JWT y roles de usuario (admin, operador).</li>
+          <li>Conteo de productos en tiempo real con actualización automática.</li>
+          <li>Exportación de reportes a Excel con filtros por fecha.</li>
+          <li>Panel de administrador para gestión de usuarios y productos.</li>
+          <li>Diseño responsive optimizado para tablets y móviles.</li>
+        </ul>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="pd-sidebar">
+        <div class="pd-card">
+          <div class="pd-card-title">Links</div>
+          <a href="https://marihe-app.vercel.app/" target="_blank" class="pd-link">
+            <span class="pd-link-dot" style="background:#38bdf8"></span>Ver Demo en vivo
+          </a>
+          <a href="https://github.com/ElIngJavi/marihe-app" target="_blank" class="pd-link">
+            <span class="pd-link-dot" style="background:#94a3b8"></span>Ver Código en GitHub
+          </a>
+        </div>
+        <div class="pd-card">
+          <div class="pd-card-title">Detalles</div>
+          <div class="pd-stat"><span class="pd-stat-label">Año</span><span class="pd-stat-val">2022</span></div>
+          <div class="pd-stat"><span class="pd-stat-label">Tipo</span><span class="pd-stat-val">Freelance</span></div>
+          <div class="pd-stat"><span class="pd-stat-label">Cliente</span><span class="pd-stat-val">MariHe</span></div>
+          <div class="pd-stat"><span class="pd-stat-label">Estado</span><span class="pd-stat-val" style="color:#4ade80">En producción</span></div>
+        </div>
+        <div class="pd-card">
+          <div class="pd-card-title">Acciones</div>
+          <a href="https://marihe-app.vercel.app/" target="_blank" class="pd-btn solid">Demo en vivo →</a>
+          <a href="https://github.com/ElIngJavi/marihe-app" target="_blank" class="pd-btn outline">Ver código</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="footer-year"></span> Javier Carranza &nbsp;·&nbsp; Hecho en Tijuana</p>
+  </footer>
+
+  <script src="../js/particles.js"></script>
+  <script src="../js/cursor.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
