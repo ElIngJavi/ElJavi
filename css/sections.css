@@ -815,7 +815,7 @@
   margin-top: 12px;
 }
 
-/* Spotify móvil fallback (solo iOS Safari) */
+/* Spotify móvil fallback (iOS Safari + Android) */
 .spotify-mobile-fallback {
   display: none;
   flex-direction: column;
@@ -886,7 +886,14 @@
   transform: translateY(-1px);
 }
 
+/* iOS Safari */
 @supports (-webkit-touch-callout: none) {
+  .spotify-desktop { display: none !important; }
+  .spotify-mobile-fallback { display: flex !important; }
+}
+
+/* Android + cualquier pantalla táctil */
+@media (max-width: 768px) and (pointer: coarse) {
   .spotify-desktop { display: none !important; }
   .spotify-mobile-fallback { display: flex !important; }
 }
